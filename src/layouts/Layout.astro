@@ -1,9 +1,10 @@
 ---
 export interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = 'Massage and Recovery' } = Astro.props;
+const { title = 'Rafa · Masaje y Recuperación', description = 'Terapias de masaje profesional y recuperación en un espacio de calma. Reserva tu sesión.' } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,12 +12,66 @@ const { title = 'Massage and Recovery' } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/jpeg" href="/icon/fav-icon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
-    <meta name="description" content="Estudio de masajes y recuperación. Terapias y bienestar." />
+    <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <slot />
   </body>
 </html>
+
+<style is:global>
+  :root {
+    --color-primary: #759b9e;
+    --color-primary-dark: #5c7d80;
+    --color-primary-light: #8fb3b6;
+    --color-bg: #759b9e;
+    --color-bg-soft: #e8f0f1;
+    --color-surface: rgba(255, 255, 255, 0.95);
+    --color-text: #1a2a2b;
+    --color-text-muted: #3d5355;
+    --color-accent: #c4a77d;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --radius: 12px;
+    --shadow: 0 8px 32px rgba(26, 42, 43, 0.12);
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+</style>

@@ -1,10 +1,604 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const videoSrc = '/videos/hero.mp4';
+const whatsappNumber = '34612345678';
+const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 ---
 
-<Layout title="Massage and Recovery">
+<Layout title="Rafa · Masaje y Recuperación" description="Terapias de masaje profesional y recuperación en un espacio de calma. Reserva tu sesión.">
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo">Rafa · Masaje y Recuperación</a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#estudio">El estudio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button type="button" class="menu-btn" aria-label="Abrir menú" id="menu-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <a href="#servicios">Servicios</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
   <main>
-    <h1>Massage and Recovery</h1>
-    <p>Bienvenido a nuestro estudio de masajes y recuperación.</p>
+    <section class="hero">
+      <div class="hero-media">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Terapia y bienestar</p>
+        <h1 class="hero-title">Masaje y recuperación para tu día a día</h1>
+        <p class="hero-text">Un espacio de calma donde cuerpo y mente se reencuentran. Sesiones personalizadas en un entorno pensado para que sueltes y te recuperes.</p>
+        <a href="#contacto" class="btn btn-primary">Reservar sesión</a>
+      </div>
+    </section>
+
+    <section class="section section-services" id="servicios">
+      <div class="container">
+        <p class="section-eyebrow">Qué ofrezco</p>
+        <h2 class="section-title">Servicios</h2>
+        <div class="services-grid">
+          <article class="card">
+            <div class="card-image-wrap">
+              <img src="/images/RafaMasajeEspalda.jpg" alt="Sesión de masaje de espalda" width="400" height="300" />
+            </div>
+            <div class="card-body">
+              <h3>Masaje descontracturante</h3>
+              <p>Alivia tensiones y contracturas con técnicas específicas. Ideal para espalda, cuello y hombros tras largas jornadas o estrés.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-image-wrap">
+              <img src="/images/RafaMasajeando.jpg" alt="Sesión de masaje en el estudio" width="400" height="300" />
+            </div>
+            <div class="card-body">
+              <h3>Recuperación deportiva</h3>
+              <p>Sesiones orientadas a deportistas: mejora la circulación, reduce la fatiga muscular y acelera la recuperación entre entrenamientos.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-image-wrap">
+              <img src="/images/fotoEstudio.jpg" alt="Ambiente del estudio" width="400" height="300" />
+            </div>
+            <div class="card-body">
+              <h3>Bienestar integral</h3>
+              <p>Combinación de masaje y ambiente tranquilo para desconectar. Pensado para quien busca un rato solo para sí mismo.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-studio" id="estudio">
+      <div class="studio-layout">
+        <div class="studio-image">
+          <img src="/images/FondoEstanterias.jpg" alt="Estudio con estanterías y ambiente acogedor" width="800" height="600" />
+        </div>
+        <div class="studio-content">
+          <p class="section-eyebrow">El espacio</p>
+          <h2 class="section-title">El estudio</h2>
+          <p>Un lugar pensado para que te sientas seguro y en calma. Luz natural, silencio y materiales cuidados para que cada sesión sea una pausa real.</p>
+          <p>Aquí no hay prisas: el ritmo lo marca tu cuerpo y lo que necesites ese día.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-about" id="sobre-mi">
+      <div class="container">
+        <p class="section-eyebrow">Quién está detrás</p>
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-block">
+          <div class="about-image">
+            <img src="/images/sobremi.jpg" alt="Rafa, profesional de masaje y recuperación" width="450" height="350" />
+          </div>
+          <div class="about-text">
+            <p>Soy Rafa y llevo años dedicándome al masaje y la recuperación. Para mí, cada persona es distinta y cada sesión también: por eso trabajo desde la escucha y el cuidado, no desde un protocolo rígido.</p>
+            <p>Mi objetivo es que salgas del estudio más ligero, más consciente de tu cuerpo y con herramientas sencillas para cuidarte en el día a día.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contacto">
+      <div class="container contact-inner">
+        <p class="section-eyebrow">Hablemos</p>
+        <h2 class="section-title">Contacto</h2>
+        <p class="contact-intro">¿Quieres reservar una sesión o tienes dudas? Escríbeme por WhatsApp y te respondo lo antes posible.</p>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <span class="btn-whatsapp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          Contactar por WhatsApp
+        </a>
+        <p class="contact-note">Responde en horario laboral. Si no puedo atenderte al momento, te contesto en cuanto sea posible.</p>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-brand">Rafa · Masaje y Recuperación</p>
+      <p class="footer-copy">Terapia y bienestar en un espacio de calma.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navMobile = document.getElementById('nav-mobile');
+    if (menuBtn && navMobile) {
+      menuBtn.addEventListener('click', () => {
+        const open = navMobile.getAttribute('aria-hidden') === 'true';
+        navMobile.setAttribute('aria-hidden', String(!open));
+        navMobile.classList.toggle('is-open', open);
+        menuBtn.classList.toggle('is-open', open);
+      });
+      navMobile.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => {
+          navMobile.setAttribute('aria-hidden', 'true');
+          navMobile.classList.remove('is-open');
+          menuBtn.classList.remove('is-open');
+        });
+      });
+    }
+  </script>
 </Layout>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(117, 155, 158, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-text);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    transition: transform var(--transition);
+  }
+
+  .menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 1px;
+    transition: var(--transition);
+  }
+
+  .menu-btn.is-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-btn.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-btn.is-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  @media (min-width: 768px) {
+    .nav {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text);
+      transition: color var(--transition);
+    }
+    .nav a:hover {
+      color: var(--color-accent);
+    }
+    .menu-btn {
+      display: none;
+    }
+  }
+
+  .nav-mobile {
+    position: fixed;
+    top: 57px;
+    left: 0;
+    right: 0;
+    background: var(--color-primary-dark);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+  }
+
+  .nav-mobile.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-mobile a {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .nav-mobile {
+      display: none;
+    }
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1.5rem 3rem;
+    overflow: hidden;
+  }
+
+  .hero-media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mejor nitidez: capa GPU y filtro sutil de contraste/saturación */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    filter: contrast(1.05) saturate(1.06);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    /* Overlay más abajo: transición más baja en la pantalla */
+    background: linear-gradient(180deg, rgba(117, 155, 158, 0.45) 0%, rgba(117, 155, 158, 0.88) 45%, var(--color-bg) 62%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+    margin: 0 0 1.25rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 2rem;
+    line-height: 1.65;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.75rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--color-primary-dark);
+  }
+
+  /* Sections */
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-services {
+    background: var(--color-bg-soft);
+    padding-top: 2.5rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--color-primary-dark);
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 2.5rem;
+  }
+
+  .services-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+
+  .card-image-wrap {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--color-text);
+  }
+
+  .card-body p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Studio */
+  .section-studio {
+    background: var(--color-bg);
+    color: white;
+  }
+
+  .studio-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .studio-layout {
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+
+  .studio-image {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .studio-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .studio-content .section-eyebrow {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .studio-content .section-title {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  .studio-content p {
+    margin: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  /* About */
+  .section-about {
+    background: var(--color-bg-soft);
+  }
+
+  .about-block {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .about-block {
+      grid-template-columns: 0.9fr 1fr;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+
+  .about-image {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .about-text p {
+    margin: 0 0 1rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Contact */
+  .section-contact {
+    background: var(--color-primary-dark);
+    color: white;
+  }
+
+  .contact-inner {
+    text-align: center;
+    max-width: 560px;
+  }
+
+  .section-contact .section-eyebrow {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .section-contact .section-title {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .contact-intro {
+    margin: 0 0 1.5rem;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .btn-whatsapp {
+    background: #25d366;
+    color: white;
+    padding: 1rem 1.75rem;
+    font-size: 1.05rem;
+    border-radius: var(--radius);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .btn-whatsapp:hover {
+    background: #20bd5a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  }
+
+  .btn-whatsapp-icon {
+    display: inline-flex;
+  }
+
+  .contact-note {
+    margin: 1.5rem 0 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--color-text);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .footer-copy {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+</style>
