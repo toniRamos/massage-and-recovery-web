@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title?: string;
+}
+
+const { title = 'Massage and Recovery' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content="Estudio de masajes y recuperación. Terapias y bienestar." />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
