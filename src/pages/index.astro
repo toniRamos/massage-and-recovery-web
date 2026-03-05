@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const videoSrc = '/videos/hero.mp4';
+const base = import.meta.env.BASE_URL;
+const videoSrc = `${base}videos/hero.mp4`;
 const whatsappNumber = '34612345678';
 const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 ---
@@ -51,7 +52,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
         <div class="services-grid">
           <article class="card">
             <div class="card-image-wrap">
-              <img src="/images/RafaMasajeEspalda.jpg" alt="Sesión de masaje de espalda" width="400" height="300" />
+              <img src={`${base}images/RafaMasajeEspalda.jpg`} alt="Sesión de masaje de espalda" width="400" height="300" />
             </div>
             <div class="card-body">
               <h3>Masaje descontracturante</h3>
@@ -60,7 +61,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
           </article>
           <article class="card">
             <div class="card-image-wrap">
-              <img src="/images/RafaMasajeando.jpg" alt="Sesión de masaje en el estudio" width="400" height="300" />
+              <img src={`${base}images/RafaMasajeando.jpg`} alt="Sesión de masaje en el estudio" width="400" height="300" />
             </div>
             <div class="card-body">
               <h3>Recuperación deportiva</h3>
@@ -69,7 +70,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
           </article>
           <article class="card">
             <div class="card-image-wrap">
-              <img src="/images/fotoEstudio.jpg" alt="Ambiente del estudio" width="400" height="300" />
+              <img src={`${base}images/fotoEstudio.jpg`} alt="Ambiente del estudio" width="400" height="300" />
             </div>
             <div class="card-body">
               <h3>Bienestar integral</h3>
@@ -83,7 +84,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
     <section class="section section-studio" id="estudio">
       <div class="studio-layout">
         <div class="studio-image">
-          <img src="/images/FondoEstanterias.jpg" alt="Estudio con estanterías y ambiente acogedor" width="800" height="600" />
+          <img src={`${base}images/FondoEstanterias.jpg`} alt="Estudio con estanterías y ambiente acogedor" width="800" height="600" />
         </div>
         <div class="studio-content">
           <p class="section-eyebrow">El espacio</p>
@@ -100,7 +101,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
         <h2 class="section-title">Sobre mí</h2>
         <div class="about-block">
           <div class="about-image">
-            <img src="/images/sobremi.jpg" alt="Rafa, profesional de masaje y recuperación" width="450" height="350" />
+            <img src={`${base}images/sobremi.jpg`} alt="Rafa, profesional de masaje y recuperación" width="450" height="350" />
           </div>
           <div class="about-text">
             <p>Soy Rafa y llevo años dedicándome al masaje y la recuperación. Para mí, cada persona es distinta y cada sesión también: por eso trabajo desde la escucha y el cuidado, no desde un protocolo rígido.</p>
