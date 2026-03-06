@@ -10,8 +10,9 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 <Layout title="Rafa · Masaje y Recuperación" description="Terapias de masaje profesional y recuperación en un espacio de calma. Reserva tu sesión.">
   <header class="header">
     <div class="header-inner">
-      <a href={import.meta.env.BASE_URL} class="logo" aria-label="Rafa Zugasti · Masaje y Recuperación - Inicio">
-        <img src={`${base}logo/logo-pequenio.png`} alt="Rafa Zugasti · Masaje y Recuperación" class="logo-img" width="120" height="40" />
+      <a href={import.meta.env.BASE_URL} class="logo" aria-label="Rafa Zugasti Studio - Inicio">
+        <img src={`${base}logo/logo-pequenio.png`} alt="" class="logo-img" width="120" height="40" />
+        <span class="logo-text">RAFA ZUGASTI STUDIO</span>
       </a>
       <nav class="nav">
         <a href="#servicios">Servicios</a>
@@ -181,14 +182,30 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   }
 
   .logo {
-    display: block;
-    line-height: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
   }
   .logo-img {
     height: 42px;
     width: auto;
     display: block;
     object-fit: contain;
+  }
+  .logo-text {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: white;
+    text-transform: uppercase;
+  }
+  @media (max-width: 600px) {
+    .logo-text {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
   }
 
   .nav {
