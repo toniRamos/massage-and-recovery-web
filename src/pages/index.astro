@@ -10,7 +10,9 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 <Layout title="Rafa · Masaje y Recuperación" description="Terapias de masaje profesional y recuperación en un espacio de calma. Reserva tu sesión.">
   <header class="header">
     <div class="header-inner">
-      <a href={import.meta.env.BASE_URL} class="logo">Rafa · Masaje y Recuperación</a>
+      <a href={import.meta.env.BASE_URL} class="logo" aria-label="Rafa Zugasti · Masaje y Recuperación - Inicio">
+        <img src={`${base}logo/logo-pequenio.png`} alt="Rafa Zugasti · Masaje y Recuperación" class="logo-img" width="120" height="40" />
+      </a>
       <nav class="nav">
         <a href="#servicios">Servicios</a>
         <a href="#estudio">El estudio</a>
@@ -39,8 +41,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
       </div>
       <div class="hero-content">
         <p class="hero-eyebrow">Terapia y bienestar</p>
-        <h1 class="hero-title">Masaje y recuperación para tu día a día</h1>
-        <p class="hero-text">Un espacio de calma donde cuerpo y mente se reencuentran. Sesiones personalizadas en un entorno pensado para que sueltes y te recuperes.</p>
+        <p class="hero-text">Un espacio dedicado al cuidado y mantenimiento del cuerpo a través del masaje. Para personas activas y deportistas.</p>
         <a href="#contacto" class="btn btn-primary">Reservar sesión</a>
       </div>
     </section>
@@ -52,29 +53,31 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
         <div class="services-grid">
           <article class="card">
             <div class="card-image-wrap">
-              <img src={`${base}images/RafaMasajeEspalda.jpg`} alt="Sesión de masaje de espalda" width="400" height="300" />
+              <img src={`${base}images/RafaMasajeando.jpg`} alt="Masaje de piernas" width="400" height="300" />
             </div>
             <div class="card-body">
-              <h3>Masaje descontracturante</h3>
-              <p>Alivia tensiones y contracturas con técnicas específicas. Ideal para espalda, cuello y hombros tras largas jornadas o estrés.</p>
+              <h3>Masaje de piernas — 45 min (45€)</h3>
+              <p>Sesión enfocada en descargar la musculatura de las piernas, especialmente en personas que entrenan o pasan muchas horas de pie.</p>
+              <p>Se trabaja principalmente sobre gemelos, sóleos, isquiotibiales y cuádriceps, tratando sobrecargas, fatiga muscular y tensión acumulada.</p>
             </div>
           </article>
           <article class="card">
             <div class="card-image-wrap">
-              <img src={`${base}images/RafaMasajeando.jpg`} alt="Sesión de masaje en el estudio" width="400" height="300" />
+              <img src={`${base}images/RafaMasajeEspalda.jpg`} alt="Masaje de espalda" width="400" height="300" />
             </div>
             <div class="card-body">
-              <h3>Recuperación deportiva</h3>
-              <p>Sesiones orientadas a deportistas: mejora la circulación, reduce la fatiga muscular y acelera la recuperación entre entrenamientos.</p>
+              <h3>Masaje de espalda — 45 min (45€)</h3>
+              <p>Masaje orientado a tratar la tensión acumulada en la zona dorsal, lumbar y cervical.</p>
+              <p>Especialmente indicado para personas que pasan muchas horas sentadas, entrenan con regularidad o sienten rigidez en la parte alta de la espalda y cuello.</p>
             </div>
           </article>
           <article class="card">
             <div class="card-image-wrap">
-              <img src={`${base}images/fotoEstudio.jpg`} alt="Ambiente del estudio" width="400" height="300" />
+              <img src={`${base}images/fotoEstudio.jpg`} alt="Piernas y espalda" width="400" height="300" />
             </div>
             <div class="card-body">
-              <h3>Bienestar integral</h3>
-              <p>Combinación de masaje y ambiente tranquilo para desconectar. Pensado para quien busca un rato solo para sí mismo.</p>
+              <h3>Piernas y espalda — 60 min (55€)</h3>
+              <p>Sesión más amplia que combina trabajo en piernas y espalda. Una buena opción para quienes entrenan con regularidad o prefieren una sesión más completa de mantenimiento muscular.</p>
             </div>
           </article>
         </div>
@@ -89,8 +92,8 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
         <div class="studio-content">
           <p class="section-eyebrow">El espacio</p>
           <h2 class="section-title">El estudio</h2>
-          <p>Un lugar pensado para que te sientas seguro y en calma. Luz natural, silencio y materiales cuidados para que cada sesión sea una pausa real.</p>
-          <p>Aquí no hay prisas: el ritmo lo marca tu cuerpo y lo que necesites ese día.</p>
+          <p>El estudio es un espacio pensado para trabajar con calma y atención al detalle. Un lugar donde el deporte está muy presente, pero sin perder la sensación de tranquilidad que necesita una buena sesión de masaje. Un ambiente cuidado, sencillo y con personalidad propia.</p>
+          <p>Con el tiempo el espacio ha ido cambiando y evolucionando poco a poco. Muchos de los objetos y pequeños detalles que hay en el estudio tienen que ver con las personas que pasan por aquí: corredores, clientes y amigos que, de alguna manera, también forman parte del lugar.</p>
         </div>
       </div>
     </section>
@@ -104,8 +107,9 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
             <img src={`${base}images/sobremi.jpg`} alt="Rafa, profesional de masaje y recuperación" width="450" height="350" />
           </div>
           <div class="about-text">
-            <p>Soy Rafa y llevo años dedicándome al masaje y la recuperación. Para mí, cada persona es distinta y cada sesión también: por eso trabajo desde la escucha y el cuidado, no desde un protocolo rígido.</p>
-            <p>Mi objetivo es que salgas del estudio más ligero, más consciente de tu cuerpo y con herramientas sencillas para cuidarte en el día a día.</p>
+            <p>Mi relación con el masaje nace del deporte. Desde hace años estoy vinculado al mundo del running como corredor y entrenador, lo que me ha permitido conocer de cerca cómo responde la musculatura cuando se entrena de forma regular.</p>
+            <p>Soy un apasionado del deporte y del running en particular. Corro desde pequeño y con el tiempo he ido orientando mi actividad hacia la maratón y las carreras de ultra distancia. El deporte nunca ha sido para mí una moda, sino algo que mis padres me inculcaron desde muy joven y que con los años se ha convertido en una parte natural de mi vida.</p>
+            <p>Durante todo este tiempo he tratado y acompañado a corredores de distintos niveles, desde personas que empiezan a correr hasta atletas con muchos kilómetros a sus espaldas. Esa experiencia es la que aplico hoy en el estudio a través del masaje, tratando sobrecargas, tensión acumulada y fatiga muscular.</p>
           </div>
         </div>
       </div>
@@ -129,7 +133,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   <footer class="footer">
     <div class="container">
-      <p class="footer-brand">Rafa · Masaje y Recuperación</p>
+      <img src={`${base}logo/logo-pequenio.png`} alt="Rafa Zugasti · Masaje y Recuperación" class="footer-logo" width="100" height="34" />
       <p class="footer-copy">Terapia y bienestar en un espacio de calma.</p>
     </div>
   </footer>
@@ -177,10 +181,14 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   }
 
   .logo {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: white;
+    display: block;
+    line-height: 0;
+  }
+  .logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+    object-fit: contain;
   }
 
   .nav {
@@ -333,10 +341,10 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   }
 
   .hero-text {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.95);
     margin: 0 0 2rem;
-    line-height: 1.65;
+    line-height: 1.5;
   }
 
   .btn {
@@ -446,6 +454,9 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
     margin: 0;
     font-size: 0.95rem;
     color: var(--color-text-muted);
+  }
+  .card-body p + p {
+    margin-top: 0.75rem;
   }
 
   /* Studio */
@@ -591,11 +602,12 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
     text-align: center;
   }
 
-  .footer-brand {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin: 0 0 0.25rem;
+  .footer-logo {
+    height: 36px;
+    width: auto;
+    margin: 0 auto 0.75rem;
+    display: block;
+    opacity: 0.95;
   }
 
   .footer-copy {
