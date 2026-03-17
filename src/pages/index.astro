@@ -41,18 +41,18 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
-        <p class="hero-eyebrow">Terapia y bienestar</p>
-        <p class="hero-text">Un espacio dedicado al cuidado y mantenimiento del cuerpo a través del masaje. Para personas activas y deportistas.</p>
-        <a href="#contacto" class="btn btn-primary">Reservar sesión</a>
+        <p class="hero-eyebrow animate-fade-up" style="--delay:0.1s">Terapia y bienestar</p>
+        <p class="hero-text animate-fade-up" style="--delay:0.3s">Un espacio dedicado al cuidado y mantenimiento del cuerpo a través del masaje. Para personas activas y deportistas.</p>
+        <a href="#contacto" class="btn btn-primary animate-fade-up" style="--delay:0.5s">Reservar sesión</a>
       </div>
     </section>
 
     <section class="section section-services" id="servicios">
       <div class="container">
-        <p class="section-eyebrow">Qué ofrezco</p>
-        <h2 class="section-title">Servicios</h2>
+        <p class="section-eyebrow animate-fade-up">Qué ofrezco</p>
+        <h2 class="section-title animate-fade-up" style="--delay:0.1s">Servicios</h2>
         <div class="services-grid">
-          <article class="card">
+          <article class="card animate-fade-up" style="--delay:0s">
             <div class="card-image-wrap">
               <img src={`${base}images/RafaMasajeando.jpg`} alt="Masaje de piernas" width="400" height="300" />
             </div>
@@ -62,7 +62,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
               <p>Se trabaja principalmente sobre gemelos, sóleos, isquiotibiales y cuádriceps, tratando sobrecargas, fatiga muscular y tensión acumulada.</p>
             </div>
           </article>
-          <article class="card">
+          <article class="card animate-fade-up" style="--delay:0.15s">
             <div class="card-image-wrap">
               <img src={`${base}images/RafaMasajeEspalda.jpg`} alt="Masaje de espalda" width="400" height="300" />
             </div>
@@ -72,7 +72,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
               <p>Especialmente indicado para personas que pasan muchas horas sentadas, entrenan con regularidad o sienten rigidez en la parte alta de la espalda y cuello.</p>
             </div>
           </article>
-          <article class="card">
+          <article class="card animate-fade-up" style="--delay:0.3s">
             <div class="card-image-wrap">
               <img src={`${base}images/fotoEstudio.jpg`} alt="Piernas y espalda" width="400" height="300" />
             </div>
@@ -87,10 +87,10 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
     <section class="section section-studio" id="estudio">
       <div class="studio-layout">
-        <div class="studio-image">
+        <div class="studio-image animate-from-left">
           <img src={`${base}images/FondoEstanterias.jpg`} alt="Estudio con estanterías y ambiente acogedor" width="800" height="600" />
         </div>
-        <div class="studio-content">
+        <div class="studio-content animate-from-right">
           <p class="section-eyebrow">El espacio</p>
           <h2 class="section-title">El estudio</h2>
           <p>El estudio es un espacio pensado para trabajar con calma y atención al detalle. Un lugar donde el deporte está muy presente, pero sin perder la sensación de tranquilidad que necesita una buena sesión de masaje. Un ambiente cuidado, sencillo y con personalidad propia.</p>
@@ -101,13 +101,13 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
     <section class="section section-about" id="sobre-mi">
       <div class="container">
-        <p class="section-eyebrow">Quién está detrás</p>
-        <h2 class="section-title">Sobre mí</h2>
+        <p class="section-eyebrow animate-fade-up">Quién está detrás</p>
+        <h2 class="section-title animate-fade-up" style="--delay:0.1s">Sobre mí</h2>
         <div class="about-block">
-          <div class="about-image">
+          <div class="about-image animate-from-left">
             <img src={`${base}images/sobremi.jpg`} alt="Rafa, profesional de masaje y recuperación" width="450" height="350" />
           </div>
-          <div class="about-text">
+          <div class="about-text animate-from-right">
             <p>Mi relación con el masaje nace del deporte. Desde hace años estoy vinculado al mundo del running como corredor y entrenador, lo que me ha permitido conocer de cerca cómo responde la musculatura cuando se entrena de forma regular.</p>
             <p>Soy un apasionado del deporte y del running en particular. Corro desde pequeño y con el tiempo he ido orientando mi actividad hacia la maratón y las carreras de ultra distancia. El deporte nunca ha sido para mí una moda, sino algo que mis padres me inculcaron desde muy joven y que con los años se ha convertido en una parte natural de mi vida.</p>
             <p>Durante todo este tiempo he tratado y acompañado a corredores de distintos niveles, desde personas que empiezan a correr hasta atletas con muchos kilómetros a sus espaldas. Esa experiencia es la que aplico hoy en el estudio a través del masaje, tratando sobrecargas, tensión acumulada y fatiga muscular.</p>
@@ -118,10 +118,10 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
     <section class="section section-contact" id="contacto">
       <div class="container contact-inner">
-        <p class="section-eyebrow">Hablemos</p>
-        <h2 class="section-title">Contacto</h2>
-        <p class="contact-intro">¿Quieres reservar una sesión o tienes dudas? Escríbeme por WhatsApp y te respondo lo antes posible.</p>
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+        <p class="section-eyebrow animate-fade-up">Hablemos</p>
+        <h2 class="section-title animate-fade-up" style="--delay:0.1s">Contacto</h2>
+        <p class="contact-intro animate-fade-up" style="--delay:0.2s">¿Quieres reservar una sesión o tienes dudas? Escríbeme por WhatsApp y te respondo lo antes posible.</p>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp animate-fade-up" style="--delay:0.35s">
           <span class="btn-whatsapp-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </span>
@@ -140,6 +140,29 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   </footer>
 
   <script>
+    // Scroll animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll('.animate-fade-up, .animate-from-left, .animate-from-right').forEach((el) => {
+      // Hero elements animate immediately on load
+      if (el.closest('.hero')) {
+        el.classList.add('is-visible');
+      } else {
+        observer.observe(el);
+      }
+    });
+
+    // Menu
     const menuBtn = document.getElementById('menu-btn');
     const navMobile = document.getElementById('nav-mobile');
     if (menuBtn && navMobile) {
@@ -610,6 +633,43 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
     margin: 1.5rem 0 0;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.75);
+  }
+
+  /* Animations */
+  .animate-fade-up,
+  .animate-from-left,
+  .animate-from-right {
+    opacity: 0;
+    transition: opacity 0.7s ease calc(var(--delay, 0s)), transform 0.7s ease calc(var(--delay, 0s));
+  }
+
+  .animate-fade-up {
+    transform: translateY(40px);
+  }
+
+  .animate-from-left {
+    transform: translateX(-50px);
+  }
+
+  .animate-from-right {
+    transform: translateX(50px);
+  }
+
+  .animate-fade-up.is-visible,
+  .animate-from-left.is-visible,
+  .animate-from-right.is-visible {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-from-left,
+    .animate-from-right {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 
   /* Footer */
